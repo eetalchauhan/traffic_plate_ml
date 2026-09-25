@@ -1,0 +1,152 @@
+Skipping import of the encryption module.
+[2026/09/25 18:28:17] ppocr INFO: Architecture : 
+[2026/09/25 18:28:17] ppocr INFO:     Backbone : 
+[2026/09/25 18:28:17] ppocr INFO:         model_size : tiny
+[2026/09/25 18:28:17] ppocr INFO:         name : PPLCNetV4
+[2026/09/25 18:28:17] ppocr INFO:     Head : 
+[2026/09/25 18:28:17] ppocr INFO:         head_list : 
+[2026/09/25 18:28:17] ppocr INFO:             CTCHead : 
+[2026/09/25 18:28:17] ppocr INFO:                 Head : 
+[2026/09/25 18:28:17] ppocr INFO:                     fc_decay : 1e-05
+[2026/09/25 18:28:17] ppocr INFO:                     mid_channels : 80
+[2026/09/25 18:28:17] ppocr INFO:                     use_guide : True
+[2026/09/25 18:28:17] ppocr INFO:                 Neck : 
+[2026/09/25 18:28:17] ppocr INFO:                     name : reshape
+[2026/09/25 18:28:17] ppocr INFO:             NRTRHead : 
+[2026/09/25 18:28:17] ppocr INFO:                 max_text_length : 25
+[2026/09/25 18:28:17] ppocr INFO:                 nrtr_dim : 384
+[2026/09/25 18:28:17] ppocr INFO:         name : MultiHead
+[2026/09/25 18:28:17] ppocr INFO:     Transform : None
+[2026/09/25 18:28:17] ppocr INFO:     algorithm : SVTR_LCNet
+[2026/09/25 18:28:17] ppocr INFO:     model_type : rec
+[2026/09/25 18:28:17] ppocr INFO: Eval : 
+[2026/09/25 18:28:17] ppocr INFO:     dataset : 
+[2026/09/25 18:28:17] ppocr INFO:         data_dir : ../ocr_test/
+[2026/09/25 18:28:17] ppocr INFO:         label_file_list : ['../rec_gt_test.txt']
+[2026/09/25 18:28:17] ppocr INFO:         name : SimpleDataSet
+[2026/09/25 18:28:17] ppocr INFO:         transforms : 
+[2026/09/25 18:28:17] ppocr INFO:             DecodeImage : 
+[2026/09/25 18:28:17] ppocr INFO:                 channel_first : False
+[2026/09/25 18:28:17] ppocr INFO:                 img_mode : BGR
+[2026/09/25 18:28:17] ppocr INFO:             MultiLabelEncode : 
+[2026/09/25 18:28:17] ppocr INFO:                 gtc_encode : NRTRLabelEncode
+[2026/09/25 18:28:17] ppocr INFO:             RecResizeImg : 
+[2026/09/25 18:28:17] ppocr INFO:                 image_shape : [3, 48, 320]
+[2026/09/25 18:28:17] ppocr INFO:             KeepKeys : 
+[2026/09/25 18:28:17] ppocr INFO:                 keep_keys : ['image', 'label_ctc', 'label_gtc', 'length', 'valid_ratio']
+[2026/09/25 18:28:17] ppocr INFO:     loader : 
+[2026/09/25 18:28:17] ppocr INFO:         batch_size_per_card : 8
+[2026/09/25 18:28:17] ppocr INFO:         drop_last : False
+[2026/09/25 18:28:17] ppocr INFO:         num_workers : 2
+[2026/09/25 18:28:17] ppocr INFO:         shuffle : False
+[2026/09/25 18:28:17] ppocr INFO: Global : 
+[2026/09/25 18:28:17] ppocr INFO:     cal_metric_during_train : True
+[2026/09/25 18:28:17] ppocr INFO:     character_dict_path : ppocr/utils/dict/ppocrv6_tiny_dict.txt
+[2026/09/25 18:28:17] ppocr INFO:     checkpoints : None
+[2026/09/25 18:28:17] ppocr INFO:     d2s_train_image_shape : [3, 48, 320]
+[2026/09/25 18:28:17] ppocr INFO:     debug : False
+[2026/09/25 18:28:17] ppocr INFO:     distributed : False
+[2026/09/25 18:28:17] ppocr INFO:     epoch_num : 20
+[2026/09/25 18:28:17] ppocr INFO:     eval_batch_step : [0, 5]
+[2026/09/25 18:28:17] ppocr INFO:     infer_img : ../ocr_test/
+[2026/09/25 18:28:17] ppocr INFO:     infer_mode : False
+[2026/09/25 18:28:17] ppocr INFO:     log_smooth_window : 20
+[2026/09/25 18:28:17] ppocr INFO:     max_text_length : 25
+[2026/09/25 18:28:17] ppocr INFO:     model_name : PP-OCRv6_tiny_rec
+[2026/09/25 18:28:17] ppocr INFO:     pretrained_model : ../models/plate_rec/best_model/model
+[2026/09/25 18:28:17] ppocr INFO:     print_batch_step : 10
+[2026/09/25 18:28:17] ppocr INFO:     save_epoch_step : 10
+[2026/09/25 18:28:17] ppocr INFO:     save_inference_dir : None
+[2026/09/25 18:28:17] ppocr INFO:     save_model_dir : ../models/plate_rec
+[2026/09/25 18:28:17] ppocr INFO:     save_res_path : ./output/rec/predicts_ppocrv6_tiny.txt
+[2026/09/25 18:28:17] ppocr INFO:     use_gpu : False
+[2026/09/25 18:28:17] ppocr INFO:     use_space_char : True
+[2026/09/25 18:28:17] ppocr INFO:     use_visualdl : False
+[2026/09/25 18:28:17] ppocr INFO: Loss : 
+[2026/09/25 18:28:17] ppocr INFO:     loss_config_list : 
+[2026/09/25 18:28:17] ppocr INFO:         CTCLoss : None
+[2026/09/25 18:28:17] ppocr INFO:         NRTRLoss : None
+[2026/09/25 18:28:17] ppocr INFO:     name : MultiLoss
+[2026/09/25 18:28:17] ppocr INFO: Metric : 
+[2026/09/25 18:28:17] ppocr INFO:     main_indicator : acc
+[2026/09/25 18:28:17] ppocr INFO:     name : RecMetric
+[2026/09/25 18:28:17] ppocr INFO: Optimizer : 
+[2026/09/25 18:28:17] ppocr INFO:     beta1 : 0.9
+[2026/09/25 18:28:17] ppocr INFO:     beta2 : 0.999
+[2026/09/25 18:28:17] ppocr INFO:     lr : 
+[2026/09/25 18:28:17] ppocr INFO:         learning_rate : 0.001
+[2026/09/25 18:28:17] ppocr INFO:         name : Cosine
+[2026/09/25 18:28:17] ppocr INFO:         warmup_epoch : 5
+[2026/09/25 18:28:17] ppocr INFO:     name : Adam
+[2026/09/25 18:28:17] ppocr INFO:     regularizer : 
+[2026/09/25 18:28:17] ppocr INFO:         factor : 3e-05
+[2026/09/25 18:28:17] ppocr INFO:         name : L2
+[2026/09/25 18:28:17] ppocr INFO: PostProcess : 
+[2026/09/25 18:28:17] ppocr INFO:     name : CTCLabelDecode
+[2026/09/25 18:28:17] ppocr INFO: Train : 
+[2026/09/25 18:28:17] ppocr INFO:     dataset : 
+[2026/09/25 18:28:17] ppocr INFO:         data_dir : ../ocr_train/
+[2026/09/25 18:28:17] ppocr INFO:         ds_width : False
+[2026/09/25 18:28:17] ppocr INFO:         ext_op_transform_idx : 1
+[2026/09/25 18:28:17] ppocr INFO:         label_file_list : ['../rec_gt_train.txt']
+[2026/09/25 18:28:17] ppocr INFO:         name : MultiScaleDataSet
+[2026/09/25 18:28:17] ppocr INFO:         transforms : 
+[2026/09/25 18:28:17] ppocr INFO:             DecodeImage : 
+[2026/09/25 18:28:17] ppocr INFO:                 channel_first : False
+[2026/09/25 18:28:17] ppocr INFO:                 img_mode : BGR
+[2026/09/25 18:28:17] ppocr INFO:             RecConAug : 
+[2026/09/25 18:28:17] ppocr INFO:                 ext_data_num : 2
+[2026/09/25 18:28:17] ppocr INFO:                 image_shape : [48, 320, 3]
+[2026/09/25 18:28:17] ppocr INFO:                 max_text_length : 25
+[2026/09/25 18:28:17] ppocr INFO:                 prob : 0.5
+[2026/09/25 18:28:17] ppocr INFO:             RecAug : None
+[2026/09/25 18:28:17] ppocr INFO:             MultiLabelEncode : 
+[2026/09/25 18:28:17] ppocr INFO:                 gtc_encode : NRTRLabelEncode
+[2026/09/25 18:28:17] ppocr INFO:             KeepKeys : 
+[2026/09/25 18:28:17] ppocr INFO:                 keep_keys : ['image', 'label_ctc', 'label_gtc', 'length', 'valid_ratio']
+[2026/09/25 18:28:17] ppocr INFO:     loader : 
+[2026/09/25 18:28:17] ppocr INFO:         batch_size_per_card : 8
+[2026/09/25 18:28:17] ppocr INFO:         drop_last : True
+[2026/09/25 18:28:17] ppocr INFO:         num_workers : 2
+[2026/09/25 18:28:17] ppocr INFO:         shuffle : True
+[2026/09/25 18:28:17] ppocr INFO:     sampler : 
+[2026/09/25 18:28:17] ppocr INFO:         divided_factor : [8, 16]
+[2026/09/25 18:28:17] ppocr INFO:         first_bs : 128
+[2026/09/25 18:28:17] ppocr INFO:         fix_bs : False
+[2026/09/25 18:28:17] ppocr INFO:         is_training : True
+[2026/09/25 18:28:17] ppocr INFO:         name : MultiScaleSampler
+[2026/09/25 18:28:17] ppocr INFO:         scales : [[320, 32], [320, 48], [320, 64]]
+[2026/09/25 18:28:17] ppocr INFO: profiler_options : None
+[2026/09/25 18:28:17] ppocr INFO: train with paddle 3.2.1 and device Place(cpu)
+[2026/09/25 18:28:17] ppocr INFO: load pretrain successful from ../models/plate_rec/best_model/model
+[2026/09/25 18:28:17] ppocr INFO: infer_img: ../ocr_test/24BH8135G_46.jpg
+[2026/09/25 18:28:17] ppocr INFO: 	 result: 24BH81356	0.9408268332481384
+[2026/09/25 18:28:17] ppocr INFO: infer_img: ../ocr_test/24BH8135G_47.jpg
+[2026/09/25 18:28:18] ppocr INFO: 	 result: 24BH81356	0.9234665632247925
+[2026/09/25 18:28:18] ppocr INFO: infer_img: ../ocr_test/CH01BB9805_50.jpg
+[2026/09/25 18:28:18] ppocr INFO: 	 result: CCH01BB9805	0.8383455872535706
+[2026/09/25 18:28:18] ppocr INFO: infer_img: ../ocr_test/CH01BB9805_51.jpg
+[2026/09/25 18:28:18] ppocr INFO: 	 result: CH01BB9805	0.8753012418746948
+[2026/09/25 18:28:18] ppocr INFO: infer_img: ../ocr_test/CH01BB9805_52.jpg
+[2026/09/25 18:28:18] ppocr INFO: 	 result: CH01BB9805	0.9274840354919434
+[2026/09/25 18:28:18] ppocr INFO: infer_img: ../ocr_test/CH01CM3475_39.jpg
+[2026/09/25 18:28:18] ppocr INFO: 	 result: CHOICA37S	0.6098951101303101
+[2026/09/25 18:28:18] ppocr INFO: infer_img: ../ocr_test/CH01CS6905_34.jpg
+[2026/09/25 18:28:18] ppocr INFO: 	 result: CH01CS6905	0.9886225461959839
+[2026/09/25 18:28:18] ppocr INFO: infer_img: ../ocr_test/CH01CS6905_35.jpg
+[2026/09/25 18:28:18] ppocr INFO: 	 result: CH01CS6905	0.9521828889846802
+[2026/09/25 18:28:18] ppocr INFO: infer_img: ../ocr_test/CH01CS6905_36.jpg
+[2026/09/25 18:28:18] ppocr INFO: 	 result: CH01CS6905	0.981484055519104
+[2026/09/25 18:28:18] ppocr INFO: infer_img: ../ocr_test/CH01CS6905_37.jpg
+[2026/09/25 18:28:18] ppocr INFO: 	 result: CH01CS6905	0.9441022872924805
+[2026/09/25 18:28:18] ppocr INFO: infer_img: ../ocr_test/CH01CS6905_38.jpg
+[2026/09/25 18:28:18] ppocr INFO: 	 result: CH01CS6905。	0.9383154511451721
+[2026/09/25 18:28:18] ppocr INFO: infer_img: ../ocr_test/HR03AE8034_33.jpg
+[2026/09/25 18:28:18] ppocr INFO: 	 result: 	0.0
+[2026/09/25 18:28:18] ppocr INFO: infer_img: ../ocr_test/HR12U5208_4.jpg
+[2026/09/25 18:28:18] ppocr INFO: 	 result: S0	0.1549067199230194
+[2026/09/25 18:28:18] ppocr INFO: infer_img: ../ocr_test/PB10JR9976_48.jpg
+[2026/09/25 18:28:18] ppocr INFO: 	 result: PB10JR9976	0.9798567891120911
+[2026/09/25 18:28:18] ppocr INFO: infer_img: ../ocr_test/PB10JR9976_49.jpg
+[2026/09/25 18:28:18] ppocr INFO: 	 result: PB10JR9976	0.9441180229187012
+[2026/09/25 18:28:18] ppocr INFO: success!
